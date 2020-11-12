@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/29 15:55:17.000.261,=C:\Users\Zulmar Santos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 15:55:59.000.859,C:\Sistemas\SeloDigital\Delphi\SeloForm.dfm=C:\Users\Zulmar Santos\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/10/29 15:55:59.000.859,C:\Sistemas\SeloDigital\Delphi\SeloForm.pas=C:\Users\Zulmar Santos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 15:56:09.000.752,C:\Sistemas\SeloDigital\Delphi\SeloDigital.dproj=C:\Users\Zulmar Santos\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/10/30 08:24:31.000.087,=C:\Sistemas\SeloDigital\Delphi\DelphiZXIngQRCode.pas</Transaction>
+    <Transaction>2020/10/30 08:25:26.000.159,C:\Sistemas\SeloDigital\Delphi\DelphiZXIngQRCode.pas=</Transaction>
+    <Transaction>2020/11/11 18:47:37.000.533,=C:\Sistemas\SeloDigital\SeloDigital\Unit1.pas</Transaction>
+    <Transaction>2020/11/11 18:52:08.000.377,C:\Sistemas\SeloDigital\SeloDigital\Unit1.dfm=C:\Sistemas\SeloDigital\SeloDigital\MensagemForm.dfm</Transaction>
+    <Transaction>2020/11/11 18:52:08.000.377,C:\Sistemas\SeloDigital\SeloDigital\Unit1.pas=C:\Sistemas\SeloDigital\SeloDigital\MensagemForm.pas</Transaction>
+  </Transactions>
+</BorlandProject>

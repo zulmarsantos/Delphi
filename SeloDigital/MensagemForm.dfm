@@ -1,0 +1,42 @@
+object FormMensagem: TFormMensagem
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Processando'
+  ClientHeight = 26
+  ClientWidth = 600
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panel: TPanel
+    Left = 0
+    Top = 0
+    Width = 600
+    Height = 26
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Aguarde! Processando protocolo [99999] de tipo de ato [707]...'
+    Color = clYellow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitWidth = 400
+    ExplicitHeight = 42
+  end
+end

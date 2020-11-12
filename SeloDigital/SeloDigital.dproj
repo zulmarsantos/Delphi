@@ -1,0 +1,150 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C1310EFE-EE7C-4798-A92B-C9A18FC64E9D}</ProjectGuid>
+        <ProjectVersion>15.4</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>SeloDigital.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>SeloDigital</SanitizedProjectName>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_UsePackage>JvBDE;JvGlobus;JvMM;JvManagedThreads;ipstudiowindataset;FireDACSqliteDriver;FireDACDSDriver;DBXSqliteDriver;FireDACPgDriver;fmx;dclRBADO1520;JvDlgs;IndySystem;JvCrypt;TeeDB;tethering;rbDAD1520;inetdbbde;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;JvNet;officeXPrt;DataSnapProviderClient;JvDotNetCtrls;DBXSybaseASEDriver;DbxCommonDriver;vclimg;odacvcl200;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;rbIDE1520;JvXPCtrls;vcldb;rbRIDE1520;vcldsnap;rbDB1520;fmxFireDAC;rbRCL1520;DBXDb2Driver;dacvcl200;DBXOracleDriver;CustomIPTransport;rbFireDAC1520;JvCore;vclribbon;rbDIDE1520;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dacfmx200;DBXMSSQLDriver;IndyIPCommon;CloudService;FmxTeeUI;FireDACIBDriver;CodeSiteExpressPkg;odacfmx200;DataSnapFireDAC;FireDACDBXDriver;ipstudiowinwordxp;soapserver;JvAppFrm;JvDB;rbUSER1520;inetdbxpress;JvRuntimeDesign;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;JclDeveloperTools;dclRBFireDAC1520;adortl;rbADO1520;JvDocking;JvWizards;FireDACASADriver;JvHMI;rbBDE1520;bindcompfmx;JvBands;vcldbx;rbDBE1520;FireDACODBCDriver;RESTBackendComponents;rbRAP1520;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;JvPluginSystem;dac200;Tee;JclContainers;DBXOdbcDriver;JvCmp;vclFireDAC;dclRBBDE1520;JvSystem;xmlrtl;DataSnapNativeClient;svnui;JvTimeFramework;rbDBDE1520;JvControls;IndyProtocols;DBXMySQLDriver;odac200;FireDACCommonDriver;bindengine;vclactnband;bindcompdbx;soaprtl;FMXTee;TeeUI;bindcompvcl;rbTCUI1520;ipstudiowin;Jcl;vclie;JvStdCtrls;JvCustom;JvJans;JvPageComps;FireDACADSDriver;vcltouch;JvPrintPreview;dclRBE1520;dclRBDBE1520;VclSmp;FireDACMSSQLDriver;FireDAC;DBXInformixDriver;Intraweb;VCLRESTComponents;DataSnapConnectors;DataSnapServerMidas;ipstudiowinclient;dsnapcon;DBXFirebirdDriver;inet;rbCIDE1520;fmxobj;rbUSERDesign1520;JclVcl;JvPascalInterpreter;FireDACMySQLDriver;soapmidas;vclx;rbTC1520;svn;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;bdertl;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>FireDACSqliteDriver;FireDACDSDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;tethering;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;officeXPrt;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;odacvcl200;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;dacvcl200;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dacfmx200;DBXMSSQLDriver;IndyIPCommon;CloudService;FmxTeeUI;FireDACIBDriver;odacfmx200;DataSnapFireDAC;FireDACDBXDriver;soapserver;inetdbxpress;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;FireDACODBCDriver;RESTBackendComponents;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;dac200;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;DataSnapNativeClient;IndyProtocols;DBXMySQLDriver;odac200;FireDACCommonDriver;bindengine;vclactnband;bindcompdbx;soaprtl;FMXTee;TeeUI;bindcompvcl;ipstudiowin;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;DBXInformixDriver;Intraweb;VCLRESTComponents;DataSnapConnectors;DataSnapServerMidas;ipstudiowinclient;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;soapmidas;vclx;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_DebugDCUs>false</DCC_DebugDCUs>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Debugger_RunParams>&apos;{&quot;Numero_TipoAto&quot;:707,&quot;IDAP&quot;:&quot;00000000000000020188R0000000000000000000&quot;,&quot;DataAto&quot;:&quot;2020-11-09T20:47:13.950&quot;,&quot;Documento&quot;:&quot;22893780000189&quot;,&quot;ValorBase&quot;:00,&quot;Numero_Divisor&quot;:2,&quot;Qtde&quot;:1,&quot;Protocolo&quot;:20188,&quot;NumPedido&quot;:&quot;pt8ar.OU1xO.r6JTu-4uuwH&quot;,&quot;ChaveDigital&quot;:&quot;4ewt3.TSD6g.humP0-LuVon.9Dds&quot;,&quot;NumeroSeloRetificado&quot;:&quot;&quot;,&quot;ListaVerbas&quot;:[{&quot;NomeVerba&quot;:&quot;EMOLUMENTOS&quot;,&quot;ValorVerba&quot;:0},{&quot;NomeVerba&quot;:&quot;DISTRIBUIDOR&quot;,&quot;ValorVerba&quot;:0},{&quot;NomeVerba&quot;:&quot;FADEP&quot;,&quot;ValorVerba&quot;:0},{&quot;NomeVerba&quot;:&quot;FUNREJUS&quot;,&quot;ValorVerba&quot;:0},{&quot;NomeVerba&quot;:&quot;FUNARPEN&quot;,&quot;ValorVerba&quot;:0},{&quot;NomeVerba&quot;:&quot;ISS&quot;,&quot;ValorVerba&quot;:0}],&quot;ListaPropriedades&quot;:[{&quot;NomePropriedade&quot;:&quot;envolvidos.tipo_envolvido&quot;,&quot;ValorPropriedade&quot;:&quot;Devedor&quot;},{&quot;NomePropriedade&quot;:&quot;envolvidos.nome_razao&quot;,&quot;ValorPropriedade&quot;:&quot;AUTO ELETRICA MR EIRELI ME&quot;},{&quot;NomePropriedade&quot;:&quot;envolvidos.cpf_cnpj&quot;,&quot;ValorPropriedade&quot;:&quot;22893780000189&quot;}]}&apos;</Debugger_RunParams>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Release>6</VerInfo_Release>
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+        <VerInfo_MajorVer>2020</VerInfo_MajorVer>
+        <VerInfo_MinorVer>11</VerInfo_MinorVer>
+        <Icon_MainIcon>iconfinder_office-16_3045441.ico</Icon_MainIcon>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=2020.11.6.51;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>51</VerInfo_Build>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="SeloForm.pas">
+            <Form>FormSelo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="MensagemForm.pas">
+            <Form>FormMensagem</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">SeloDigital.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k200.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
